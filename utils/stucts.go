@@ -55,7 +55,7 @@ const (
 )
 
 const (
-	Port = "80"
+	Port = "6600"
 )
 
 type ErrMess struct {
