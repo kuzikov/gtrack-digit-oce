@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{.Name}}</title>
+    <link href="/public/css/style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">  
+</head>
+<body>
+    <div class="contentCard">
+        <table class="information">
+            <thead>
+                <th>
+                    <tr>
+                        <td>
+                            <h1>{{.Name}}</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="{{.Image}}"/>
+                        </td>
+                    </tr>
+
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h2>Creation date: {{.CreationDate}}</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>First Album: {{.FirstAlbum}}</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Members: <br>{{range .Members}}{{.}}<br>{{end}}</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <details>
+                            <summary>Concerts</summary>
+                                {{range $k, $v := .Relations.DatesLocations}}
+                                    {{$k}}:<br>{{range $v}}{{.}}<br>{{end}}
+                                {{end}}
+                        </details>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+        
+        
+        
+        <p><a href="/">go back</a></p>
+    </div>
+{{template "footer"}}
+{{template "finish"}}

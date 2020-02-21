@@ -1,0 +1,7 @@
+1. git stash
+2. git pull origin <branch>
+3. git stash pop
+
+4. git add *
+5 .git commit -m "..."
+6. git push origin <branch>

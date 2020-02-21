@@ -1,0 +1,37 @@
+{{define "head-body"}}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Groupie-Tracker</title>
+    <link href="/public/css/style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
+</head>
+<body>
+{{end}}
+
+{{define "header"}}
+<div class="header">
+    <input list="cars" id="carsInput" autocomplete="off">
+    <datalist id="cars"> 
+        {{range .}}
+        <option value="{{.Name}}"/>
+        {{end}}
+        </datalist>
+</div>
+{{end}}
+
+{{define "content"}}
+<div class="content">Something is here</div>
+{{end}}
+
+{{define "footer"}}
+<footer class="footer">
+    <p>Footer here</p>
+</footer>
+{{end}}
+
+{{define "finish"}}
+    </body>
+</html>
+{{end}}

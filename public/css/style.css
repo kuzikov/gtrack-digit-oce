@@ -1,0 +1,67 @@
+html, body {
+    height: 100%;
+
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .header {
+    height: 200px;
+    background-color: bisque;
+    border: 1px solid greenyellow;
+  }
+  .header input {
+    width: 200px;
+    overflow-x: auto;
+  }
+  .content {
+    flex: 1 0 auto;
+    background-color: cadetblue;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
+    /* border: 3px solid black; */
+  }
+  /* .content :hover {
+    border: 3px solid lightslategray;
+    background-color: lightslategray;
+    color: white;
+    transition: 0.5s;
+  } */
+  .footer {
+      background-color: aquamarine;
+      border: 1px blue solid;
+    flex-shrink: 0;
+  }
+
+  /* .card {
+    max-width: 150px;
+    margin: 10px auto;
+  } */
+
+  .content table {
+    width: 200px;
+    height: 330px;
+    /* background-color: lightskyblue; */
+    display: inline-block;
+    margin: 10px;
+    padding: 14px;
+    border: 3px solid black;
+  }
+
+  .content :hover {
+    background-color: lightslategray;
+    color: white;
+    transition: 1s;
+  }
+  table img {
+    width: 90%;
+  }
+   /* table h2 {
+     font-size: auto;
+   } */

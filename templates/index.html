@@ -1,0 +1,25 @@
+{{template "head-body"}}
+<div class="header">
+    <!-- <label for="searchbar">Try to find something</label> -->
+    <form action="/search" method="POST">
+        <input list="searching" id="searchbar" autocomplete="off" name="text" placeholder="search... &#128269;">
+        <input type="submit" hidden="true" />
+    </form>
+    
+    <datalist id="searching"> 
+        {{range $index, $value := .}}
+        <option value="{{$value.Name}}">{{$value.Name}}   ||<p>members:{{range $value.Members}}{{.}}<br>{{end}}</p></option>
+        {{end}}
+        </datalist>
+</div>
+<div class="contentIndex">
+    {{range $i, $v := .}}
+    <form id="card" method="POST" action="/search">   
+        <input class="logo" type="image" src="{{$v.Image}}"/>
+        <input name="text" value="{{$v.Name}}" type="hidden" />
+        <h3>{{$v.Name}}</h3>
+    </form>
+    {{end}}
+</div>
+{{template "footer"}}
+{{template "finish"}}
